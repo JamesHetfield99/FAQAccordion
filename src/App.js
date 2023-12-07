@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import FAQElement from './Components/FAQ/FAQElement';
+import bgDesktop from "./Assets/images/background-pattern-desktop.svg"
+import bgMobile from "./Assets/images/background-pattern-mobile.svg"
+
+const phoneScreen = window.innerWidth == 375
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={phoneScreen ? bgMobile : bgDesktop} className='background' alt='Not loaded' />
+      <FAQElement />
     </div>
   );
 }
