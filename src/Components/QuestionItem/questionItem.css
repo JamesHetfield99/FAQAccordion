@@ -22,6 +22,8 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.5px;
+
+    animation: slideDown 0.3s ease-in;
 }
 .question-container{
     display: flex;
@@ -35,4 +37,9 @@
         font-size: 16px;
     }
     
+}
+
+@keyframes slideDown {
+    0%{transform: translateY(-10%);}
+    100%{transform: translate(0);}
 }
